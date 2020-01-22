@@ -1,0 +1,25 @@
+
+.ql-snow.ql-toolbar {
+    color: white;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border: 2px solid #90CAF9;
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+.ql-editor {
+    box-sizing: border-box;
+    border: 2px solid #90CAF9;
+    /* border-radius: 2rem; */
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 1rem;
+}

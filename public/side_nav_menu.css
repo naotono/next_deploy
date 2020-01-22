@@ -1,0 +1,39 @@
+
+
+.side_nav_menu .side_nav_menu_box {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(226, 80, 80);
+    opacity: 0.95;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.side_nav_menu .side_nav_menu_box.open {
+    width: 100%;
+}
+
+.side_nav_menu .side_nav_menu_box span {
+    width: 100vw;
+    height: 100vh;
+}
+
+.side_nav_menu .side_nav_menu_box a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side_nav_menu .side_nav_menu_box  a:hover {
+    color: gray;
+}

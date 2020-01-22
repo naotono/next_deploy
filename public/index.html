@@ -1,26 +1,37 @@
-import { useState } from 'react'
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="./add_float_btn.css">
+    <link rel="stylesheet" href="./top_nav_menu.css">
+    <link rel="stylesheet" href="./bottom_nav_menu.css">
+    <link rel="stylesheet" href="./side_nav_menu.css">
+    <title>Document</title>
+</head>
+<body>
 
-const Home = () => {
-  const [open, setOpen] = useState(false)
 
-  return (
-    <>
-      <div class="top_nav_menu">
+
+    <!-- top menu -->
+    <div class="top_nav_menu">
         <div class="top_nav_menu_box">
             <div class="top_nav_menu_title">
                 <h1>タイトル</h1>
             </div>
 
             <div class="top_nav_menu_search">
-                <input type="text"/>
+                <input type="text">
                 <a href="#">
-                    <img src="search.svg" alt=""/>
+                    <img src="search.svg" alt="">
                 </a>
             </div>
 
             <div class="top_nav_menu_items">
-                <a href="#" onClick={() => open ? setOpen(false) : setOpen(true)}>
-                    <img src="./humburger.svg" alt="top_nav_menu_items"/>
+                <a href="#" onclick="openNav()">
+                    <img src="./humburger.svg" alt="top_nav_menu_items">
                 </a>
             </div>
         </div>
@@ -28,10 +39,10 @@ const Home = () => {
 
 
 
-
+    <!-- side menu -->
     <div class="side_nav_menu">
-        <span class="closebtn" onClick={() => open ? setOpen(false) : setOpen(true)}>
-        <div id="mySideNav" class={open ? "side_nav_menu_box open" : "side_nav_menu_box"}>
+        <span class="closebtn" onclick="closeNav()">
+        <div id="mySideNav" class="side_nav_menu_box">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">ホーム</a>
             <a href="#">プロフィール</a>
@@ -50,7 +61,7 @@ const Home = () => {
 
 
 
-
+    <!-- float button -->
     <div class="add_float_btn">
         <div class="add_float_btn_box">
             <a href="#">
@@ -61,34 +72,45 @@ const Home = () => {
 
 
 
-
+    <!-- bottom menu -->
     <div class="bottom_nav_menu">
         <div class="bottom_nav_menu_box">
 
             <div class="top_nav_menu_column">
                 <a href="#">
-                    <img src="./user.svg" alt="top_nav_menu_items"/>
+                    <img src="./user.svg" alt="top_nav_menu_items">
                     <h1>ホーム</h1>
                 </a>
             </div>
 
             <div class="top_nav_menu_column">
                 <a href="#">
-                    <img src="./post.svg" alt="top_nav_menu_items"/>
+                    <img src="./post.svg" alt="top_nav_menu_items">
                     <h1>ポスト</h1>
                 </a>
             </div>
 
             <div class="top_nav_menu_column">
                 <a href="#">
-                    <img src="./setting.svg" alt="top_nav_menu_items"/>
+                    <img src="./setting.svg" alt="top_nav_menu_items">
                     <h1>設定</h1>
                 </a>
             </div>
         </div>
     </div>
-    </>
-  )
-}
 
-export default Home
+
+    
+    <script>
+        function openNav() {
+          document.getElementById("mySideNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySideNav").style.width = "0";
+        }
+    </script>
+
+
+</body>
+</html>
