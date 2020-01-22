@@ -19,7 +19,7 @@ const Home = () => {
             </div>
 
             <div class="top_nav_menu_items">
-                <a href="javascript:void(0)" onClick={() => open ? setOpen(false) : setOpen(true)}>
+                <a onClick={() => open ? setOpen(false) : setOpen(true)}>
                     <img src="./humburger.svg" alt="top_nav_menu_items"/>
                 </a>
             </div>
